@@ -35,21 +35,10 @@ test -L ~/Desktop/Movies || ln -s ~/Downloads/Movies ~/Desktop/Movies
 
 
 # Install packages
-packages=( 
-    nmap wget htop tree youtube-dl 
-    git node php php@7.4 composer ffmpeg 
-    mysql 
-)
-
-for lib in "${packages[@]}"
-do
-    echo checking "$lib"..
-
-    # which -s "$lib" || brew install "$lib"
-    
-    brew ls --versions $lib || brew install $lib
-    brew outdated $lib || brew install $lib
-done
+while read package; do
+    brew ls --versions $package || brew install $package
+    brew outdated $package || brew install $package
+done <brew-packages.list
 
 
 # Install apps
