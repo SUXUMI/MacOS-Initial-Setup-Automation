@@ -1,0 +1,6 @@
+*
+!.gitignore
+!install.sh
+!php74.sh
+!php81.sh
+!vscode-extensions.list
