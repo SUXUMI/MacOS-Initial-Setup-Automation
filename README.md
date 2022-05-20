@@ -2,7 +2,7 @@
 
 ## Description
 
-Install packages, applications via homebrew, setup some initial git configuration, make some useful aliases just in one go.
+Install packages, applications via homebrew, setup some initial git configurations, make some useful aliases just in one go.
 
 ### Install brew first
 
