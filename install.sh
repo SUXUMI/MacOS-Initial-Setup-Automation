@@ -42,19 +42,10 @@ done <brew-packages.list
 
 
 # Install apps
-apps=(
-    iterm2 zoc firefox persepolis-download-manager postman
-    visual-studio-code phpstorm pycharm intellij-idea eclipse-php
-    zoom obs mysqlworkbench
-)
-
-for app in "${apps[@]}"
-do
-    echo checking "$app"..
-    
+while read app; do
     brew ls --versions --cask $app || brew install --cask $app
     brew outdated --cask $app || brew install --cask $app
-done
+done <brew-apps.list
 
 
 # Git configuration
