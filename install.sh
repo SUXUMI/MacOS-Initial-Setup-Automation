@@ -91,3 +91,10 @@ fi
 test -f ~/.zshrc || sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 
+# Install some usefull shortcuts, aliases, etc.
+if [ ! -f "./Useful-shell-scripts-for-mac/_create_sym_links.sh" ]; then
+    git clone https://github.com/SUXUMI/Useful-shell-scripts-for-mac.git
+    cd ./Useful-shell-scripts-for-mac
+    sudo ./_create_sym_links.sh
+    cd ../
+fi
