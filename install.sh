@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # display hidden files & folders
 defaults write com.apple.Finder AppleShowAllFiles true
 # sudo killall Finder
