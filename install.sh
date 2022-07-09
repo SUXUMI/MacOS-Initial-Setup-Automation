@@ -52,6 +52,7 @@ done <brew-apps.list
 
 # Git configuration
 # https://stackoverflow.com/a/48370253/1565790
+git config --global core.editor "code --wait"
 git config --global pager.branch false
 git config --global init.defaultBranch main
 
